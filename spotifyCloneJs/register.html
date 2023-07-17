@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Register</title>
+    <link rel="stylesheet" href="reg-style.css">
+</head>
+<body>
+    <header>
+        <div id="register-logo">
+            <h2><i class="bi bi-spotify"></i>Spotify</h2>
+            <h1>Sign up for free to start listening.</h1>
+            <div>
+                 <button type="submit" id="facebook-login" class="button button-facebook"><i class="bi bi-facebook"></i>Sign up with Facebook</button>
+            </div>
+            <div>
+                <button type="submit" id="google-login" class="button button-google"><i class="bi bi-google"></i>Sign up with Google</button>
+            </div>
+        </div>
+    </header>
+    <section>
+        <form>
+            <div class="form-group col-md-12">
+                <label for="userEmail">What's your email?</label>
+                <input type="email" class="form-control inputs"  name="userEmail" id="userEmail" placeholder="What's your email?" required>
+                <span id="userEmailSpan"></span>
+                <small id="emailHelp" class="form-text text-green"><u>Use phone number instead.</u></small>
+            </div>
+            <div class="form-group mt-3 col-md-12">
+                <label for="userpsw">Create a password</label>
+                <input type="password" class="form-control inputs" id="userpsw" name="userpsw" placeholder="Create a password" required>
+                <span id="userPswSpan"></span>
+            </div>
+            <div class="form-group mt-3 col-md-12">
+                <label for="userName">What should we call you?</label>
+                <input type="text" class="form-control inputs" id="userName" name="userName" placeholder="Enter a profile name" required>
+                <span id="userNameSpan"></span>
+                <small id="exampleInputNameSmall" class="form-text text-green"><b>This appers on your profile.</b></small>
+            </div>
+            <div class="form-group mt-3 col-md-12">
+                <label for="year">What's your date of birth?</label>
+                <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" name="year" id="year" placeholder="YYYY" inputmode="numeric" maxlength="4" pattern="(19[0-9]{2})|(200)[0-9]|(201)[0-0]">
+                    </div>
+                    <div class="col">
+                        <select name="month" id="month">
+                            <option value="0">Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                          </select>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="date" id="date" placeholder="DD">
+                    </div>
+                    <span id="userYearSpan"></span><br>
+                    <span id="userMonthSpan"></span><br>
+                    <span id="userDateSpan"></span>
+                    </div>
+            </div>
+            <div class="form-group mt-3 col-md-12">
+                <label for="gender">What is your gender?</label>
+                <div class="row flex-container">
+                <p>
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male"> Male
+                </p>
+                <p>
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female"> Female
+                </p>
+                <p>
+                <input class="form-check-input" type="radio" name="gender" id="nb" value="nb"> Non-Binary
+                </p>
+                <p>
+                <input class="form-check-input" type="radio" name="gender" id="other" value="other"> other
+                </p>
+                <p>
+                <input class="form-check-input" type="radio" name="gender" id="nos" value="nos"> Preffer Not to say
+                </p>
+                <span id="userGenderSpan"></span>
+            </div>
+            <div class="form-group mt-3 col-md-12">
+               <div class="row">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck1">
+                      <label class="form-check-label" for="gridCheck1">
+                        I would prefer not to receive marketing messages from Spotify
+                      </label>
+                  </div>
+               </div>
+            </div>
+            <div class="form-group mt-3 col-md-12">
+                <div class="row">
+                     <div class="form-check">
+                       <input class="form-check-input" type="checkbox" id="gridCheck2">
+                       <label class="form-check-label" for="gridCheck2">
+                        Share my registration data with Spotify's content providers for marketing purposes.
+                       </label>
+                   </div>
+                </div>
+             </div>
+             <div class="paras mt-3">
+                <p>By clicking on sign-up, you agree to Spotify's <span class="links">Terms and Conditions </span>of Use.</p>
+                <p>To learn more about how Spotify collects, uses, shares and protects your personal data, please see <span class="links">Spotify's Privacy Policy.</span></p>
+             </div>
+             <div class="reg-button">
+                <button type="submit" id="signup-button" onclick="signup()">Sign Up</button>
+             </div>
+        </form>
+    </section>
+    <!-- Js-->
+    <script src="script.js"></script>
+     <!-- Bootstrap Icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+     <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
