@@ -1,0 +1,43 @@
+.main{
+    width:100%;
+    height: auto;
+    color: #F1F6F9;
+    padding:30px;
+    border: 1px solid #8080800f;
+    border-radius: 50px;
+    box-shadow: 1em 0 1.4em grey, -1em 0 1.4em grey;
+    background-color: #394867;
+}
+
+#feilds{
+    display: flex;
+    margin-left:15rem;
+    margin-top: 4rem;
+}
+input#crypval, input#currval {
+    height: 3rem;
+}
+
+select.form-select.form-select-lg.mb-3 {
+    border-radius: 25px;
+}
+
+button.bitConvert {
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 2rem;
+    background-color: #9BA4B5;
+    font-size: 1.5rem;
+    font-family: initial;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    margin-left: 35rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    color: #F1F6F9;
+}
+
+button.bitConvert:hover {
+    text-decoration: underline;
+    color: #F1F6F9;
+    
+}
